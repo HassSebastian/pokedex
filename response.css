@@ -1,0 +1,104 @@
+@media(max-width: 768px) {
+    .progressContainer {
+        width: 460px;
+        margin: 0 8px
+    }
+
+    #bigPictureNow {
+        height: 274px;
+    }
+}
+
+@media(max-width: 620px) {
+    header {
+        flex-direction: column;
+        height: 110px;
+    }
+
+    .progressContainer {
+        width: 330px;
+    }
+
+    #bigPictureNow {
+        height: 160px;
+    }
+
+    .selectPokemon:hover {
+        transform: scale(1.2);
+    }
+}
+
+@media(max-width: 490px) {
+    #characterDeteils {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    #infoCard{
+        width: 100%;
+    }
+    .progressContainer {
+        width: 170px;
+    }
+
+    #bigPicture {
+        flex-direction: column;
+    }
+
+    .closeButtonHandy{
+        opacity: 1;
+    }
+    
+}
+@media(max-width: 330px) {
+    .progressContainer {
+        width: 100px;
+    }
+
+    .closeButtonHandy{
+        left: -10px;
+    }
+    .pokeIdBig, .pokeNameBig{
+        font-size: 15px;
+    }
+
+}
+
+@media(max-height: 667px) {
+    #bigPictureNow {
+        height: 150px;
+    }
+
+    .selectPokemon {
+        height: 100px;
+    }
+}
+
+
+@media(max-height: 600px) {
+    #bigPictureNow {
+        height: 360px;
+    }
+}
+
+@media(max-height: 540px) {
+    #bigPictureNow {
+        height: 300px;
+    }
+}
+
+@media(max-height: 412px) {
+    #bigPictureNow {
+        height: 170px;
+    }
+}
+
+@media(max-height: 360px) {
+    #bigPictureNow {
+        height: 150px;
+    }
+
+    .selectPokemon {
+        height: 100px;
+    }
+}

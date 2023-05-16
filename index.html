@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./img/meinlogo.png">
+
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="response.css">
+
+    <script src="script.js"></script>
+    <script src="tamplates.js"></script>
+
+</head>
+
+<body onload="init()" id="body">
+
+    <header>
+        <span>Pokedex</span>
+        <div>
+        <input type="text" placeholder="Pocemon-Search"  id="search">
+        <button onclick="search()">OK</button>
+        </div>
+    </header>
+
+    <!---------------------------------------------------------->
+    <!-------------------- show all Pokemon -------------------->
+    <!---------------------------------------------------------->
+
+    <div id="allPokemon" class=""></div>
+    <div id="button" style="display: flex; justify-content:center;margin:64px 0;">
+        <button id="morePokemon" class="d-none" onclick="morePokemon()">Mehr Laden</button>
+    </div>
+
+    <!------------------------------------------------------------->
+    <!-------------------- show select Pokemon -------------------->
+    <!------------------------------------------------------------->
+
+    <div id="infoCardContainer" onclick="closeInfoCardContainer()" class="d-none">
+        <div id="infoCard" onclick="doNotClose(event)">
+            <div class="xButtonNameId">
+                <span class="closeButtonHandy">close --></span>
+                <div id="nameId"></div>
+            </div>
+            <div id="bigPicture"></div>
+            <div id="characterDeteils"></div>
+            <table id="table"></table>
+        </div>
+    </div>
+</body>
+
+</html>
