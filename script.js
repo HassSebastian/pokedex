@@ -18,7 +18,7 @@ function init() {
 
 
 async function first100Pokemon(){
-    for (i = 1; i <= 100; i++) {
+    for (i = 1; i <= 50; i++) {
         let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         let response = await fetch(url);
         currentPokemon = await response.json();
@@ -30,7 +30,7 @@ async function first100Pokemon(){
 
 
 async function allPokemon() {
-    for (i = 101; i <= 850; i++) {
+    for (i = 51; i <= 850; i++) {
         let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         let response = await fetch(url);
         currentPokemon = await response.json();
