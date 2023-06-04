@@ -2,13 +2,13 @@ let currentPokemon;
 let pokedex = [];
 let pokeNames = [];
 let offset = 0;
-let pokemonLimit = 100;
+let pokemonLimit = 50;
 const pokeTyp = ['normal', 'fire', 'water', 'grass', 'electric', 'ice', 'fighting', 'poison', 'ground', 'flying', 'psychic', 'bug', 'rock', 'ghost', 'dark', 'dragon', 'steel', 'fairy'];
 const pokeTypcolor = ['#A9A878', '#F07F2F', '#6890F0', '#78C74F', '#F7D02F', '#98D8D8', '#BE1F37', '#A040A1', '#E0C068', '#A890F0', '#F85888', '#A8B821', '#B7A038', '#705797', '#6F5848', '#7038F8', '#B8B8CF', '#EE99AC'];
 
 
 function init() {
-    first100Pokemon();
+    first50Pokemon();
 }
 
 
@@ -17,7 +17,7 @@ function init() {
 //-----------------------------------------------------//
 
 
-async function first100Pokemon(){
+async function first50Pokemon(){
     for (i = 1; i <= 50; i++) {
         let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         let response = await fetch(url);
@@ -30,7 +30,7 @@ async function first100Pokemon(){
 
 
 async function allPokemon() {
-    for (i = 51; i <= 850; i++) {
+    for (i = 51; i <= 350; i++) {
         let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         let response = await fetch(url);
         currentPokemon = await response.json();
@@ -107,7 +107,7 @@ function infoCard(i) {
 
 
 function morePokemon() {
-    if (pokemonLimit == 840) {
+    if (pokemonLimit == 350) {
         offset = pokemonLimit;
         pokemonLimit = 10;
         document.getElementById('button').classList.add('d-none');
@@ -115,8 +115,6 @@ function morePokemon() {
         offset = pokemonLimit;
         pokemonLimit += 20;
     }
-    console.log(offset);
-    console.log(pokemonLimit);
     loadPokemon();
 }
 
